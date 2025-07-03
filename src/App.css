@@ -1,0 +1,51 @@
+/* Full app container */
+.app {
+  width: 1500px;
+  min-height: 100vh;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* Form view (Add/Edit Employee) */
+.app > form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* Top controls: Add, search, filter */
+.top-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Add Employee button */
+.top-controls button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.top-controls button:hover {
+  background-color: rgb(12, 55, 12);
+}
+
+/* Responsive improvements (optional) */
+@media (max-width: 600px) {
+  .top-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
