@@ -3,7 +3,7 @@ import { mockEmployees } from "../../data/mockEmployees";
 import "./EmployeeList.css";
 
 
-export default function EmployeeList({ employeeData = [], setEmployeeData, onEdit, onDelete, searchQuery, departmentFilter }) {
+export default function EmployeeList({ employeeData = [], setEmployeeData, onEdit, onDelete }) {
     const [currentPage, setCurrentPage] = useState(1);
     const EMPLOYEES_PER_PAGE = 10;
 
@@ -41,7 +41,6 @@ export default function EmployeeList({ employeeData = [], setEmployeeData, onEdi
 
     return (
         <div className="employee-table-container">
-            <h1>Employee Details</h1>
             <p>
                 Showing {startIdx + 1} - {Math.min(endIdx, employeeData.length)} of{" "}
                 {employeeData.length} employees (Page {currentPage} of {totalPages})
@@ -51,6 +50,7 @@ export default function EmployeeList({ employeeData = [], setEmployeeData, onEdi
                 <thead> 
                     <tr>
                         <th>ID</th>
+                        <th>Profile</th>
                         <th>First Name {renderSortButtons("firstName")}</th>
                         <th>Last Name {renderSortButtons("lastName")}</th>
                         <th>Email</th>
@@ -68,6 +68,11 @@ export default function EmployeeList({ employeeData = [], setEmployeeData, onEdi
                     {paginatedEmployees.map((employee) => (
                         <tr key={employee.id}>
                             <td>{employee.id}</td>
+                            <td>
+                            <img
+                            src={employee.profilePic}
+                            alt={`${employee.firstName}'s avatar`}
+                            className="profile-pic"/></td>
                             <td>{employee.firstName}</td>
                             <td>{employee.lastName}</td>
                             <td>{employee.email}</td>

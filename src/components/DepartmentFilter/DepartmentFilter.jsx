@@ -1,12 +1,9 @@
 import React from "react";
+import "./DepartmentFilter.css"
 
 export default function DepartmentFilter({ departmentFilter, setDepartmentFilter }) {
   return (
-    <select
-      value={departmentFilter}
-      onChange={(e) => setDepartmentFilter(e.target.value)}
-      style={{ marginLeft: "10px", padding: "5px" }}
-    >
+    <select className="select" value={departmentFilter} onChange={(e) => setDepartmentFilter(e.target.value)} >
       <option value="">All Departments</option>
       <option value="Engineering">Engineering</option>
       <option value="HR">HR</option>

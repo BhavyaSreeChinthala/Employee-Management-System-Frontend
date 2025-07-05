@@ -1,5 +1,7 @@
 import { useState } from "react";
 import EmployeeList from "./components/EmployeeList/EmployeeList";
+import EmployeeCard from "./components/EmployeeCard/EmployeeCard";
+
 import EmployeeForm from "./components/EmployeeForm/EmployeeForm";
 import SearchBar from "./components/SearchBar/SearchBar";
 import DepartmentFilter from "./components/DepartmentFilter/DepartmentFilter";
@@ -12,6 +14,8 @@ function App() {
   const [editingEmployee, setEditingEmployee] = useState(null);
   const [searchQuery, setSearchQuery] = useState("");
   const [departmentFilter, setDepartmentFilter] = useState("");
+  const [viewMode, setViewMode] = useState(""); // ✅ Add this
+
 
   const handleAddEmployee = (newEmployee) => {
     setEmployeeData((prev) => [...prev, newEmployee]);
@@ -37,38 +41,63 @@ function App() {
     return matchesSearch && matchesDepartment;
   });
 
-return (
-  <div className="app">
-    {showForm ? (
-      <EmployeeForm
-        onAdd={handleAddEmployee}
-        onUpdate={handleUpdateEmployee}
-        onClose={() => {
-          setShowForm(false);
-          setEditingEmployee(null);
-        }}
-        editingEmployee={editingEmployee}
-      />
-    ) : (
-      <>
-        <div className="top-controls">
-          <button onClick={() => setShowForm(true)}>+ Add Employee</button>
-          <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
-          <DepartmentFilter departmentFilter={departmentFilter} setDepartmentFilter={setDepartmentFilter} />
-        </div>
-        <EmployeeList
-          employeeData={filteredEmployees}
-          setEmployeeData={setEmployeeData}
-          onEdit={(emp) => {
-            setEditingEmployee(emp);
-            setShowForm(true);
+  return (
+    <div className="app">
+      {showForm ? (
+        <EmployeeForm
+          onAdd={handleAddEmployee}
+          onUpdate={handleUpdateEmployee}
+          onClose={() => {
+            setShowForm(false);
+            setEditingEmployee(null);
           }}
-          onDelete={handleDeleteEmployee}
+          editingEmployee={editingEmployee}
         />
-      </>
-    )}
-  </div>
-);
+      ) : (
+        <>
+          <div className="top-controls">
+            <button onClick={() => setShowForm(true)}>+ Add Employee</button>
+            <SearchBar searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
+            <DepartmentFilter departmentFilter={departmentFilter} setDepartmentFilter={setDepartmentFilter} />
+          </div>
+          <div className="view-toggle">
+            <h1>Employee Details</h1>
+            <button onClick={() => setViewMode("table")} className={viewMode === "table" ? "active" : ""}>
+              Table View
+            </button>
+            <button onClick={() => setViewMode("card")} className={viewMode === "card" ? "active" : ""}>
+              Card View
+            </button>
+            
+          </div>
+
+          {viewMode === "table" && (
+            <EmployeeList
+              employeeData={filteredEmployees}
+              setEmployeeData={setEmployeeData}
+              onEdit={(emp) => {
+                setEditingEmployee(emp);
+                setShowForm(true);
+              }}
+              onDelete={handleDeleteEmployee}
+            />
+          )}
+
+          {viewMode === "card" && (
+            <EmployeeCard
+              employeeData={filteredEmployees}
+              onEdit={(emp) => {
+                setEditingEmployee(emp);
+                setShowForm(true);
+              }}
+              onDelete={handleDeleteEmployee}
+            />
+          )}
+        </>
+      )}
+    </div>
+  );
 }
+
 
 export default App;

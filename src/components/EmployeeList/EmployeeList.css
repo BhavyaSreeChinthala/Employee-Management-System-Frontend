@@ -34,7 +34,6 @@ div.employee-table-container {
 
 .employee-table th button {
   margin-left: 4px;
-  font-size: 0.8rem;
   color: white;
   background-color: green;
   font-weight: bold;
@@ -52,6 +51,34 @@ div.employee-table-container {
 .employee-table th button:hover{
   background-color: rgb(12, 55, 12);
 }
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.employee-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.employee-card h3 {
+    margin-top: 0;
+}
+
+.view-toggle {
+    margin-bottom: 10px;
+}
+
+.view-toggle button {
+    margin-right: 8px;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+
 
 .pagination {
   margin-top: 15px;

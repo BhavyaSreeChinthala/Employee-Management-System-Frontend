@@ -1,0 +1,10 @@
+/* SearchBar.css */
+.bar input {
+  margin-left: 10px;
+  padding: 5px;
+  font-size: large;
+  border-radius: 4px;
+  color: black;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}

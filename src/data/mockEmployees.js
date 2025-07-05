@@ -11,7 +11,8 @@ export const mockEmployees = [
     hireDate: '2022-03-15',
     isActive: true,
     performance: 5,
-    managerId: 5
+    managerId: 5,
+    profilePic: `https://randomuser.me/api/portraits/women/1.jpg`
   },
   {
     id: 2,
@@ -25,7 +26,8 @@ export const mockEmployees = [
     hireDate: '2021-07-10',
     isActive: true,
     performance: 5,
-    managerId: 5
+    managerId: 5,
+    profilePic: `https://randomuser.me/api/portraits/men/2.jpg`
   },
   {
     id: 3,
@@ -39,7 +41,8 @@ export const mockEmployees = [
     hireDate: "2019-03-10",
     isActive: true,
     performance: 5,
-    managerId: 5 
+    managerId: 5,
+    profilePic: `https://randomuser.me/api/portraits/men/3.jpg`
   },
   {
     id: 4,
@@ -53,7 +56,8 @@ export const mockEmployees = [
     hireDate: "2019-03-10",
     isActive: true,
     performance: 5,
-    managerId: 5 
+    managerId: 5,
+    profilePic: `https://randomuser.me/api/portraits/men/4.jpg`
   },
   {
     id: 5,
@@ -67,7 +71,8 @@ export const mockEmployees = [
     hireDate: "2020-05-15",
     isActive: true,
     performance: 4,
-    managerId: null // CEO has no manager
+    managerId: null,
+    profilePic: `https://randomuser.me/api/portraits/men/5.jpg`
   },
   {
     id: 6,
@@ -81,7 +86,8 @@ export const mockEmployees = [
     hireDate: "2022-06-15",
     isActive: false,
     performance: 2,
-    managerId: 4 // Reports to Mike Johnson
+    managerId: 4,
+    profilePic: `https://randomuser.me/api/portraits/men/6.jpg`
   },
   {
     id: 7,
@@ -95,7 +101,8 @@ export const mockEmployees = [
     hireDate: "2020-08-12",
     isActive: true,
     performance: 4,
-    managerId: 5
+    managerId: 5,
+    profilePic: `https://randomuser.me/api/portraits/women/7.jpg`
   },
   {
     id: 8,
@@ -109,7 +116,8 @@ export const mockEmployees = [
     hireDate: "2021-01-25",
     isActive: true,
     performance: 3,
-    managerId: 1
+    managerId: 1,
+    profilePic: `https://randomuser.me/api/portraits/men/8.jpg`
   },
   {
     id: 9,
@@ -123,7 +131,8 @@ export const mockEmployees = [
     hireDate: "2022-02-18",
     isActive: true,
     performance: 4,
-    managerId: 3
+    managerId: 3,
+    profilePic: `https://randomuser.me/api/portraits/women/9.jpg`
   },
   {
     id: 10,
@@ -137,7 +146,8 @@ export const mockEmployees = [
     hireDate: "2021-11-05",
     isActive: true,
     performance: 5,
-    managerId: null
+    managerId: null,
+    profilePic: `https://randomuser.me/api/portraits/men/10.jpg`
   },
   {
     id: 11,
@@ -151,7 +161,8 @@ export const mockEmployees = [
     hireDate: "2022-04-22",
     isActive: true,
     performance: 3,
-    managerId: 1
+    managerId: 1,
+    profilePic: `https://randomuser.me/api/portraits/women/11.jpg`
   },
   {
     id: 12,
@@ -165,7 +176,8 @@ export const mockEmployees = [
     hireDate: "2022-07-30",
     isActive: false,
     performance: 2,
-    managerId: 5
+    managerId: 5,
+    profilePic: `https://randomuser.me/api/portraits/men/12.jpg`
   },
   {
     id: 13,
@@ -179,7 +191,8 @@ export const mockEmployees = [
     hireDate: "2021-09-14",
     isActive: true,
     performance: 4,
-    managerId: 1
+    managerId: 1,
+    profilePic: `https://randomuser.me/api/portraits/women/13.jpg`
   },
   {
     id: 14,
@@ -193,7 +206,8 @@ export const mockEmployees = [
     hireDate: "2022-03-08",
     isActive: true,
     performance: 3,
-    managerId: 10
+    managerId: 10,
+    profilePic: `https://randomuser.me/api/portraits/men/14.jpg`
   },
   {
     id: 15,
@@ -207,7 +221,8 @@ export const mockEmployees = [
     hireDate: "2022-05-19",
     isActive: true,
     performance: 4,
-    managerId: 7
+    managerId: 7,
+    profilePic: `https://randomuser.me/api/portraits/women/15.jpg`
   },
   {
     id: 16,
@@ -221,7 +236,8 @@ export const mockEmployees = [
     hireDate: "2022-08-01",
     isActive: true,
     performance: 3,
-    managerId: 3
+    managerId: 3,
+    profilePic: `https://randomuser.me/api/portraits/men/16.jpg`
   },
   {
     id: 17,
@@ -235,7 +251,8 @@ export const mockEmployees = [
     hireDate: "2022-10-15",
     isActive: true,
     performance: 2,
-    managerId: 1
+    managerId: 1,
+    profilePic: `https://randomuser.me/api/portraits/women/17.jpg`
   },
   {
     id: 18,
@@ -249,7 +266,8 @@ export const mockEmployees = [
     hireDate: "2020-12-10",
     isActive: true,
     performance: 5,
-    managerId: null
+    managerId: null,
+    profilePic: `https://randomuser.me/api/portraits/men/18.jpg`
   },
   {
     id: 19,
@@ -263,7 +281,8 @@ export const mockEmployees = [
     hireDate: "2019-06-20",
     isActive: true,
     performance: 5,
-    managerId: null
+    managerId: null,
+    profilePic: `https://randomuser.me/api/portraits/women/19.jpg`
   },
   {
     id: 20,
@@ -277,6 +296,7 @@ export const mockEmployees = [
     hireDate: "2018-04-05",
     isActive: true,
     performance: 5,
-    managerId: 5
+    managerId: 5,
+    profilePic: `https://randomuser.me/api/portraits/men/20.jpg`
   }
 ];
